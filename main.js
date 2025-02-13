@@ -4,11 +4,17 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 
+// --- NEXT --- 
+// let's chain this entrance animtion with 
+// a new animation we'll create next time 
+// that puts the spheres into circular orbit
+const SPHERES_DID_ENTER = 360000;
+
 let camera;
 let composer;
 let renderer;
 let step = 0;
-let speed = 0.005;
+let speed = 0.0075;
 let meshes = [];
 
 init();
@@ -27,9 +33,8 @@ async function init() {
   const geometry = new THREE.SphereGeometry(0.1);
   const material = new THREE.MeshBasicMaterial({ color: 0x7cb0ce });
 
-  for (let current = 0; current < 6; current++) {
+  for (let current = 0; current < 7; current++) {
     const sphere = new THREE.Mesh(geometry, material);
-    sphere.position.x = current / 2.5;
     meshes.push(sphere);
     scene.add(sphere);
   }
@@ -57,8 +62,8 @@ async function init() {
     0.85
   );
   bloomPass.threshold = 0;
-  bloomPass.strength = 1;
-  bloomPass.radius = 0;
+  bloomPass.strength = 2.5;
+  bloomPass.radius = -2;
 
   const outputPass = new OutputPass();
 
