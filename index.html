@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8" />
-    <title>My first three.js app</title>
-    <style>
-      body {
-        margin: 0;
-      }
-    </style>
+    <title>sudokatsu</title>
+    <!-- 
+    Testing with threeJS 
     <script type="importmap">
       {
         "imports": {
@@ -15,10 +13,29 @@
           "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.173.0/examples/jsm/"
         }
       }
-    </script>
+    </script> -->
   </head>
   <body>
-    <div id="container"></div>
+    <div id="container">
+      <div id="orbs"></div>
+      <ul id="menuOptionsContainer">
+        <li class="menuOptions" onmouseover="playSound()">
+          <a class="menuOptions" href="/about.html">
+          About
+          </a>
+        </li>
+        <li class="menuOptions" onmouseover="playSound()">
+          Work
+        </li>
+        <li class="menuOptions" onmouseover="playSound()">
+          Resume
+        </li>
+        <li class="menuOptions" onmouseover="playSound()">
+          Contact
+        </li>
+      </ul>
+      <!-- <audio id='select' src="file:///select.mp3"/> -->
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
