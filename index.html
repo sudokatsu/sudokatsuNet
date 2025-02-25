@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <meta charset="utf-8" />
     <title>sudokatsu</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+
     <!-- 
     Testing with threeJS 
     <script type="importmap">
@@ -19,22 +21,14 @@
     <div id="container">
       <div id="orbs"></div>
       <ul id="menuOptionsContainer">
-        <li class="menuOptions" onmouseover="playSound()">
-          <a class="menuOptions" href="/pages/about.html">
-          About
-          </a>
+        <li >
+          <a class="menuOptions" href="/pages/about.html">About</a>
         </li>
-        <li class="menuOptions" onmouseover="playSound()">
-          Work
-        </li>
-        <li class="menuOptions" onmouseover="playSound()">
-          Resume
-        </li>
-        <li class="menuOptions" onmouseover="playSound()">
-          Contact
-        </li>
+        <li>Work</li>
+        <li>Resume</li>
+        <li>Contact</li>
       </ul>
-      <!-- <audio id='select' src="file:///select.mp3"/> -->
+      <audio id="selectSound" type="audio/mpeg" src="/assets/ps2Select.mp3" />
     </div>
     <script type="module" src="/main.js"></script>
   </body>
