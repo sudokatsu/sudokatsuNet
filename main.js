@@ -1,10 +1,10 @@
 let sound = document.getElementById('selectSound');
-let homeContainer = document.getElementById('homeContainer');
+let menuOptionsContainer = document.getElementById('menuOptionsContainer');
 let navOptions = document.getElementsByClassName('menuOptions');
 let transitionBars = document.getElementsByClassName('transitionAnimation');
 let barsArray = Array.from(transitionBars);
 
-function controlAudioNav() {
+function controlAudioNav(event) {
   sound.play();
 
   barsArray.forEach((bar) => {
@@ -21,3 +21,7 @@ function controlAudioNav() {
 Array.from(navOptions).forEach((option) => {
   option.addEventListener('click', controlAudioNav);
 });
+
+setTimeout(function () {
+  menuOptionsContainer.style.opacity = '1';
+}, 1000);
