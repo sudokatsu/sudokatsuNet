@@ -1,13 +1,21 @@
 let sound = document.getElementById('selectSound');
+let homeContainer = document.getElementById('homeContainer');
 let navOptions = document.getElementsByClassName('menuOptions');
+let transitionBars = document.getElementsByClassName('transitionAnimation');
+let barsArray = Array.from(transitionBars);
 
-function controlAudioNav(event) {
+function controlAudioNav() {
   sound.play();
-  event.preventDefault(); //will stop the link href to call the blog page
+
+  barsArray.forEach((bar) => {
+    bar.style.transform = 'translateX(0)';
+  });
 
   setTimeout(function () {
-    window.location.href = '/pages/about.html'; 
-  }, 750);
+    barsArray.forEach((bar) => {
+      bar.style.transform = 'translateX(-100vw)';
+    });
+  }, 2100);
 }
 
 Array.from(navOptions).forEach((option) => {
