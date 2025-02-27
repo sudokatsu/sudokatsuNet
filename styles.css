@@ -12,6 +12,10 @@ body {
 #orbs {
   display: flex;
   flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12vw;
+  margin-bottom: 2vw;
 }
 #menuOptionsContainer {
   display: flex;
@@ -19,6 +23,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 12vw;
   list-style-type: none;
   opacity: 0;
   transition: opacity 1s linear;

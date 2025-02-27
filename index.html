@@ -5,17 +5,6 @@
     <meta charset="utf-8" />
     <title>sudokatsu</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-
-    <!-- 
-    Testing with threeJS 
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.173.0/build/three.module.js",
-          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.173.0/examples/jsm/"
-        }
-      }
-    </script> -->
   </head>
   <body>
     <div id="bar1" class="transitionAnimation"></div>
@@ -24,7 +13,12 @@
     <div id="bar4" class="transitionAnimation"></div>
     <div id="bar5" class="transitionAnimation"></div>
     <div id="homeContainer">
-      <div id="orbs"></div>
+      <div id="orbs">
+        <video id="birth" height="400" width="400" autoplay muted loop>
+          <!-- <source src="/assets/a.mp4" type="video/mp4" /> -->
+          <source src="/assets/b.mp4" type="video/mp4"/>
+        </video>
+      </div>
       <ul id="menuOptionsContainer">
         <li class="menuOptions">About</li>
         <li class="menuOptions">Work</li>
