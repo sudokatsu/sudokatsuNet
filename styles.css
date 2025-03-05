@@ -85,10 +85,11 @@ li:hover {
   background-color: black;
   height: 100vh;
   width: 100vw;
-  display: flex;
+  display: none;
+  flex: 1;
 }
 
-#backArrow {
+.backArrow {
   z-index: 1;
   height: 6vh;
   width: 6vw;
@@ -98,7 +99,7 @@ li:hover {
   cursor: pointer;
 }
 
-#backArrow:hover {
+.backArrow:hover {
   filter: invert(70%) sepia(18%) saturate(6215%) hue-rotate(178deg) brightness(106%) contrast(91%);
 }
 
@@ -127,5 +128,12 @@ p {
   background-color: black;
   height: 100vh;
   width: 100vw;
-  display: flex;
+  display: none;
+  flex: 1;
+}
+#fileContainer {
+  margin: 7.5vh 10vw;
+  height: 85vh;
+  width: 100vw;
+  border: none;
 }
