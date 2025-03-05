@@ -5,11 +5,24 @@ let menuOptionsContainer = document.getElementById('menuOptionsContainer');
 let navOptions = document.getElementsByClassName('menuOptions');
 let transitionBars = document.getElementsByClassName('transitionAnimation');
 let barsArray = Array.from(transitionBars);
+let birth = document.getElementById('birth');
+let loop = document.getElementById('loop');
 
 // Adds a fade-in to the main menu
 setTimeout(function () {
   menuOptionsContainer.style.opacity = '1';
 }, 1000);
+
+// Triggers orbs animation
+setTimeout(function () {
+  birth.play();
+}, 1500);
+birth.addEventListener('ended', () => {
+  birth.style.display = 'none';
+  loop.style.display = 'flex';
+  loop.play();
+  loop.setAttribute('loop', 'true');
+});
 
 // Plays audio, css transition, and displays new content
 function controlAudioNav() {
