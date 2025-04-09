@@ -36,11 +36,11 @@ function pageTransition() {
 }
 
 function controlBackPress() {
+  sound.play();
   pageTransition();
   setTimeout(function () {
     homeContainer.style.display = 'flex';
   }, 2000);
-  sound.play();
 }
 
 // Plays audio, css transition, and displays new content
@@ -57,10 +57,15 @@ function controlAudioNav() {
   }, 2000);
 }
 
+function openPdf() {
+  sound.play();
+  window.open('/assets/sudokatsu_resume.pdf')
+}
+
 Array.from(backArrows).forEach((arrow) => {
   arrow.addEventListener('click', controlBackPress);
 });
 
 Array.from(navOptions).forEach((option) => {
-  option.addEventListener('click', controlAudioNav);
+  option.addEventListener('click', option.innerHTML === 'Resume' ? openPdf : controlAudioNav);
 });
