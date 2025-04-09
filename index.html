@@ -7,47 +7,51 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   </head>
   <body>
-    <div id="bar1" class="transitionAnimation"></div>
-    <div id="bar2" class="transitionAnimation"></div>
-    <div id="bar3" class="transitionAnimation"></div>
-    <div id="bar4" class="transitionAnimation"></div>
-    <div id="bar5" class="transitionAnimation"></div>
-    <div id="homeContainer">
-      <div id="orbs">
-        <video id="birth" height="400" width="400" muted>
-          <source src="/assets/birth.mp4" type="video/mp4" />
-        </video>
-        <video id="loop" height="400" width="400" muted>
-          <source src="/assets/loop.mp4" type="video/mp4" />
-        </video>
+    <div>
+      <div id="bar1" class="transitionAnimation"></div>
+      <div id="bar2" class="transitionAnimation"></div>
+      <div id="bar3" class="transitionAnimation"></div>
+      <div id="bar4" class="transitionAnimation"></div>
+      <div id="bar5" class="transitionAnimation"></div>
+      <div id="homeContainer">
+        <div id="orbs">
+          <video id="birth" height="400" width="400" muted>
+            <source src="/assets/birth.mp4" type="video/mp4" />
+          </video>
+          <video id="loop" height="400" width="400" muted>
+            <source src="/assets/loop.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <ul id="menuOptionsContainer">
+          <li class="menuOptions">About</li>
+          <li class="menuOptions">Work</li>
+          <li class="menuOptions">Resume</li>
+        </ul>
       </div>
-      <ul id="menuOptionsContainer">
-        <li class="menuOptions">About</li>
-        <li class="menuOptions">Work</li>
-        <li class="menuOptions">Resume</li>
-        <li class="menuOptions">Contact</li>
-      </ul>
+      <div id="About">
+        <img src="/assets/arrow.svg" class="backArrow" />
+        <div id="aboutMeContainer">
+          <img src="/assets/pfp.png" id="pfp" />
+          <p>Hey 👋</p>
+          <p>
+            I’m Kurtis - a software engineer passionate about building beautiful
+            user experiences. I specialize in React Native development, crafting
+            seamless, high-performance apps that blend innovation with
+            usability. I love designing solutions that incorporate delightful
+            details like animations, color theory, and micro interactions.
+          </p>
+          <p>
+            Beyond coding, I’m deeply interested in 3D modeling and creating
+            immersive experiences. When I’m not working, you’ll find me rock
+            climbing, playing video games, or wrenching on cars - always looking
+            for my next project.
+          </p>
+          <p>Let’s build something great together!</p>
+        </div>
+      </div>
+      <div id="Work"></div>
       <audio id="selectSound" type="audio/mpeg" src="/assets/ps2Select.wav" />
+      <script type="module" src="/main.js"></script>
     </div>
-    <div id="About">
-      <img src="/assets/arrow.svg" class="backArrow" />
-      <div id="aboutMeContainer">
-        <img src="/assets/pfp.png" id="pfp" />
-        <p>
-          Hey! I’m Kurtis - a software engineer passionate about building
-          beautiful user experiences. I specialize in React Native development,
-          crafting seamless, high-performance apps that blend innovation with
-          usability. I love designing solutions that incorporate delightful
-          details like animations, color theory, and user interactions.
-        </p>
-        <p>
-          Beyond coding, I’m deeply interested in 3D modeling and creating immersive experiences. When I’m not working, you’ll find me rock climbing, playing
-          video games, or wrenching on cars - always looking for my next
-          project—whether it’s in code, on the rocks, or under the hood.
-        </p>
-        <p>Let’s build something great together!</p>
-      </div>
-    </div>
-    <script type="module" src="/main.js"></script>
   </body>
 </html>

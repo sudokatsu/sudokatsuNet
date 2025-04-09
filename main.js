@@ -36,10 +36,12 @@ function pageTransition() {
 }
 
 function controlBackPress() {
+  const selected = document.getElementById(this.innerHTML);
   sound.play();
   pageTransition();
   setTimeout(function () {
     homeContainer.style.display = 'flex';
+    selected.style.display = 'none';
   }, 2000);
 }
 
@@ -53,13 +55,12 @@ function controlAudioNav() {
   setTimeout(function () {
     homeContainer.style.display = 'none';
     selected.style.display = 'flex';
-    selected.style.flex = '1';
   }, 2000);
 }
 
 function openPdf() {
   sound.play();
-  window.open('/assets/sudokatsu_resume.pdf')
+  window.open('/assets/sudokatsu_resume.pdf');
 }
 
 Array.from(backArrows).forEach((arrow) => {
@@ -67,5 +68,9 @@ Array.from(backArrows).forEach((arrow) => {
 });
 
 Array.from(navOptions).forEach((option) => {
-  option.addEventListener('click', option.innerHTML === 'Resume' ? openPdf : controlAudioNav);
+  if (option.innerHTML === 'Resume') {
+    option.addEventListener('click', openPdf);
+  } else {
+    option.addEventListener('click', controlAudioNav);
+  }
 });
