@@ -60,7 +60,7 @@ function controlAudioNav() {
 
 function openPdf() {
   sound.play();
-  window.open('/assets/sudokatsu_resume.pdf');
+  window.open('/assets/resume.pdf');
 }
 
 Array.from(backArrows).forEach((arrow) => {
